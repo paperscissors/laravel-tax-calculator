@@ -34,11 +34,11 @@ class Calculator
      * @param string $locale
      * @param int    $taxRate
      */
-    public function __construct(string $currency = 'USD', string $locale = 'en', float $taxRate = 0)
+    public function __construct(string $currency, string $locale, float $taxRate)
     {
-        $this->setTaxRate($taxRate);
         $this->setCurrency($currency);
         $this->setLocale($locale);
+        $this->setTaxRate($taxRate);
     }
 
     /**
@@ -48,7 +48,7 @@ class Calculator
      */
     public function setAmount(int $value) : Calculator
     {
-        $this->amount = $value * 100;
+        $this->amount = $value;
 
         return $this;
     }
@@ -68,7 +68,7 @@ class Calculator
      */
     public function setTaxRate(float $value) : Calculator
     {
-        $this->taxRate = $value / 100;
+        $this->taxRate = $value;
 
         return $this;
     }
