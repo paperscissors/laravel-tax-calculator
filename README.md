@@ -38,8 +38,6 @@ This will create a `config/tax-calculator.php` file in your app that you can mod
 
 ## Usage
 
-##### Render the Cookie Constent "Container"
-
 ``` php
 TaxCalculator::setAmount(100)
              ->setTaxRate(20)
