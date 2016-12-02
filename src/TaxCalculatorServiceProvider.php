@@ -20,8 +20,6 @@ class TaxCalculatorServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        parent::boot();
-
         $this->publishConfig();
     }
 
