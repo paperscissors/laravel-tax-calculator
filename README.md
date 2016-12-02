@@ -11,17 +11,13 @@ $ composer require faustbrian/laravel-tax-calculator
 Add the service provider to `config/app.php` in the `providers` array.
 
 ``` php
-'providers' => [
-    BrianFaust\TaxCalculator\TaxCalculatorServiceProvider::class
-];
+BrianFaust\TaxCalculator\TaxCalculatorServiceProvider::class
 ```
 
 If you want you can use the [facade](http://laravel.com/docs/facades). Add the reference in `config/app.php` to your aliases array.
 
 ``` php
-'aliases' => [
-    'TaxCalculator' => BrianFaust\TaxCalculator\Facades\TaxCalculator::class
-];
+'TaxCalculator' => BrianFaust\TaxCalculator\Facades\TaxCalculator
 ```
 
 ## Configuration
