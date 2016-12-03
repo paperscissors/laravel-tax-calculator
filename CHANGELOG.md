@@ -2,19 +2,8 @@
 
 All Notable changes to `faustbrian/laravel-tax-calculator` will be documented in this file.
 
-## NEXT - YYYY-MM-DD
+## 1.0.1 (15/11/2016)
+- Fix setting amount and tax rate
 
-### Added
-- Nothing
-
-### Deprecated
-- Nothing
-
-### Fixed
-- Nothing
-
-### Removed
-- Nothing
-
-### Security
-- Nothing
+## 1.0.0 (15/11/2016)
+- First release
