@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\TaxCalculator;
 
 class Calculator
@@ -55,7 +57,7 @@ class Calculator
      *
      * @return \BrianFaust\TaxCalculator\Calculator
      */
-    public function setAmount(int $value) : Calculator
+    public function setAmount(int $value): Calculator
     {
         $this->amount = $value;
 
@@ -65,7 +67,7 @@ class Calculator
     /**
      * @return int
      */
-    public function getAmount() : integer
+    public function getAmount(): integer
     {
         return $this->amount;
     }
@@ -75,7 +77,7 @@ class Calculator
      *
      * @return \BrianFaust\TaxCalculator\Calculator
      */
-    public function setTaxRate(float $value) : Calculator
+    public function setTaxRate(float $value): Calculator
     {
         $this->taxRate = $value;
 
@@ -85,7 +87,7 @@ class Calculator
     /**
      * @return float
      */
-    public function getTaxRate() : float
+    public function getTaxRate(): float
     {
         return $this->taxRate;
     }
@@ -95,7 +97,7 @@ class Calculator
      *
      * @return \BrianFaust\TaxCalculator\Calculator
      */
-    public function setCurrency(string $value) : Calculator
+    public function setCurrency(string $value): Calculator
     {
         $this->currency = $value;
 
@@ -105,7 +107,7 @@ class Calculator
     /**
      * @return string
      */
-    public function getCurrency() : string
+    public function getCurrency(): string
     {
         return $this->currency;
     }
@@ -115,7 +117,7 @@ class Calculator
      *
      * @return \BrianFaust\TaxCalculator\Calculator
      */
-    public function setLocale(string $value) : Calculator
+    public function setLocale(string $value): Calculator
     {
         $this->locale = $value;
 
@@ -125,7 +127,7 @@ class Calculator
     /**
      * @return string
      */
-    public function getLocale() : string
+    public function getLocale(): string
     {
         return $this->locale;
     }
@@ -135,7 +137,7 @@ class Calculator
      *
      * @return \BrianFaust\TaxCalculator\Calculator
      */
-    public function setDiscount(float $value) : Calculator
+    public function setDiscount(float $value): Calculator
     {
         $this->discount = $value / 100;
 
@@ -145,7 +147,7 @@ class Calculator
     /**
      * @return float
      */
-    public function getDiscount() : float
+    public function getDiscount(): float
     {
         return $this->discount;
     }
@@ -153,7 +155,7 @@ class Calculator
     /**
      * @return \BrianFaust\TaxCalculator\Money
      */
-    public function subtotal() : Money
+    public function subtotal(): Money
     {
         return $this->toMoney($this->amount);
     }
@@ -161,7 +163,7 @@ class Calculator
     /**
      * @return \BrianFaust\TaxCalculator\Money
      */
-    public function discount() : Money
+    public function discount(): Money
     {
         $amount = $this->subtotal()->getAmount() * $this->discount;
 
@@ -171,7 +173,7 @@ class Calculator
     /**
      * @return float
      */
-    public function taxRate() : float
+    public function taxRate(): float
     {
         return $this->taxRate;
     }
@@ -179,7 +181,7 @@ class Calculator
     /**
      * @return \BrianFaust\TaxCalculator\Money
      */
-    public function taxValue() : Money
+    public function taxValue(): Money
     {
         $amount = ($this->subtotal()->getAmount() - $this->discount()->getAmount()) * $this->taxRate();
 
@@ -189,7 +191,7 @@ class Calculator
     /**
      * @return \BrianFaust\TaxCalculator\Money
      */
-    public function total() : Money
+    public function total(): Money
     {
         $amount = ($this->subtotal()->getAmount() - $this->discount()->getAmount()) + $this->taxvalue()->getAmount();
 

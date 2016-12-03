@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\TaxCalculator;
 
 use Money\Currencies\ISOCurrencies;
@@ -50,7 +52,7 @@ class Money
     /**
      * @return float
      */
-    public function decimal() : float
+    public function decimal(): float
     {
         return (new DecimalMoneyFormatter(new ISOCurrencies()))->format($this->money);
     }
@@ -58,7 +60,7 @@ class Money
     /**
      * @return string
      */
-    public function format() : string
+    public function format(): string
     {
         $numberFormatter = new NumberFormatter($this->language, NumberFormatter::CURRENCY);
         $moneyFormatter = new IntlMoneyFormatter($numberFormatter, new ISOCurrencies());
