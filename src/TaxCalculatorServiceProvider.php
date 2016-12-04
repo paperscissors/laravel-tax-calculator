@@ -22,9 +22,9 @@ declare(strict_types=1);
 
 namespace BrianFaust\TaxCalculator;
 
-use BrianFaust\ServiceProvider\ServiceProvider;
+use BrianFaust\ServiceProvider\AbstractServiceProvider;
 
-class TaxCalculatorServiceProvider extends ServiceProvider
+class TaxCalculatorServiceProvider extends AbstractServiceProvider
 {
     /**
      * Bootstrap the application services.
