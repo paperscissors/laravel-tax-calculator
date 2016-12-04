@@ -66,7 +66,7 @@ class Calculator
      *
      * @return \BrianFaust\TaxCalculator\Calculator
      */
-    public function setAmount(int $value): Calculator
+    public function setAmount(int $value): self
     {
         $this->amount = $value;
 
@@ -86,7 +86,7 @@ class Calculator
      *
      * @return \BrianFaust\TaxCalculator\Calculator
      */
-    public function setTaxRate(float $value): Calculator
+    public function setTaxRate(float $value): self
     {
         $this->taxRate = $value;
 
@@ -106,7 +106,7 @@ class Calculator
      *
      * @return \BrianFaust\TaxCalculator\Calculator
      */
-    public function setCurrency(string $value): Calculator
+    public function setCurrency(string $value): self
     {
         $this->currency = $value;
 
@@ -126,7 +126,7 @@ class Calculator
      *
      * @return \BrianFaust\TaxCalculator\Calculator
      */
-    public function setLocale(string $value): Calculator
+    public function setLocale(string $value): self
     {
         $this->locale = $value;
 
@@ -146,7 +146,7 @@ class Calculator
      *
      * @return \BrianFaust\TaxCalculator\Calculator
      */
-    public function setDiscount(float $value): Calculator
+    public function setDiscount(float $value): self
     {
         $this->discount = $value / 100;
 
@@ -213,7 +213,7 @@ class Calculator
      *
      * @return \Money\Money
      */
-    private function toMoney(int $amount)
+    private function toMoney(int $amount): Money
     {
         return new Money($amount, $this->currency, $this->locale);
     }
