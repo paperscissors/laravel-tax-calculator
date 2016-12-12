@@ -208,12 +208,12 @@ class Calculator
     }
 
     /**
-     * @param int    $amount
+     * @param float  $amount
      * @param string $currency
      *
      * @return \Money\Money
      */
-    private function toMoney(int $amount): Money
+    private function toMoney(float $amount): Money
     {
         return new Money($amount, $this->currency, $this->locale);
     }
