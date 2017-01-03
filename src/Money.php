@@ -63,7 +63,7 @@ class Money
      */
     public function decimal(): float
     {
-        return (new DecimalMoneyFormatter(new ISOCurrencies()))->format($this->money);
+        return (float) (new DecimalMoneyFormatter(new ISOCurrencies()))->format($this->money);
     }
 
     /**
