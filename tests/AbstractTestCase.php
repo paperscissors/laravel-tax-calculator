@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Laravel Tax Calculator.
  *
@@ -27,6 +24,6 @@ abstract class AbstractTestCase extends AbstractPackageTestCase
      */
     protected function getServiceProviderClass($app): string
     {
-        return \BrianFaust\TaxCalculator\ServiceProvider::class;
+        return \BrianFaust\TaxCalculator\TaxCalculatorServiceProvider::class;
     }
 }

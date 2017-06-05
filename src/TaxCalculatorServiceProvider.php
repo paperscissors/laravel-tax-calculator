@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Laravel Tax Calculator.
  *
@@ -14,51 +11,31 @@ declare(strict_types=1);
 
 namespace BrianFaust\TaxCalculator;
 
-use BrianFaust\ServiceProvider\AbstractServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
-class TaxCalculatorServiceProvider extends AbstractServiceProvider
+class TaxCalculatorServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
      */
-    public function boot(): void
+    public function boot()
     {
-        $this->publishConfig();
+        $this->publishes([
+            __DIR__.'/../config/laravel-tax-calculator.php' => config_path('laravel-tax-calculator.php'),
+        ], 'config');
     }
 
     /**
      * Register the application services.
      */
-    public function register(): void
+    public function register()
     {
-        parent::register();
-
-        $this->mergeConfig();
+        $this->mergeConfigFrom(__DIR__.'/../config/laravel-tax-calculator.php', 'laravel-tax-calculator');
 
         $this->app->singleton('tax-calculator', function ($app) {
-            $config = $app->config['tax-calculator'];
+            $config = $app->config['laravel-tax-calculator'];
 
             return new Calculator($config['currency'], $config['locale'], $config['tax_rate']);
         });
-    }
-
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides(): array
-    {
-        return array_merge(parent::provides(), ['tax-calculator']);
-    }
-
-    /**
-     * Get the default package name.
-     *
-     * @return string
-     */
-    public function getPackageName(): string
-    {
-        return 'tax-calculator';
     }
 }
