@@ -13,22 +13,9 @@ declare(strict_types=1);
 
 namespace BrianFaust\Tests\TaxCalculator;
 
-use GrahamCampbell\TestBenchCore\ServiceProviderTrait;
 use BrianFaust\TaxCalculator\TaxCalculatorServiceProvider;
 
 class ServiceProviderTest extends AbstractTestCase
 {
     use ServiceProviderTrait;
-
-    /**
-     * Get the service provider class.
-     *
-     * @param \Illuminate\Contracts\Foundation\Application $app
-     *
-     * @return string
-     */
-    protected function getServiceProviderClass($app): string
-    {
-        return TaxCalculatorServiceProvider::class;
-    }
 }
