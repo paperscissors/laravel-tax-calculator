@@ -40,4 +40,9 @@ class TaxCalculatorServiceProvider extends ServiceProvider
             return new Calculator($config['currency'], $config['locale'], $config['tax_rate']);
         });
     }
+
+    public function provides()
+    {
+        return ['tax-calculator'];
+    }
 }
