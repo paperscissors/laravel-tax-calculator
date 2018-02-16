@@ -1,5 +1,10 @@
 # Laravel Tax Calculator
 
+[![Build Status](https://img.shields.io/travis/faustbrian/Laravel-Tax-Calculator/master.svg?style=flat-square)](https://travis-ci.org/faustbrian/Laravel-Tax-Calculator)
+[![PHP from Packagist](https://img.shields.io/packagist/php-v/faustbrian/laravel-tax-calculator.svg?style=flat-square)]()
+[![Latest Version](https://img.shields.io/github/release/faustbrian/Laravel-Tax-Calculator.svg?style=flat-square)](https://github.com/faustbrian/Laravel-Tax-Calculator/releases)
+[![License](https://img.shields.io/packagist/l/faustbrian/Laravel-Tax-Calculator.svg?style=flat-square)](https://packagist.org/packages/faustbrian/Laravel-Tax-Calculator)
+
 ## Installation
 
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
@@ -44,7 +49,7 @@ $ phpunit
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to Brian Faust at hello@brianfaust.me. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to hello@brianfaust.me. All security vulnerabilities will be promptly addressed.
 
 ## Credits
 
