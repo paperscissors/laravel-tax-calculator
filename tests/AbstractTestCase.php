@@ -24,7 +24,7 @@ abstract class AbstractTestCase extends AbstractPackageTestCase
      *
      * @return string
      */
-    protected function getServiceProviderClass($app): string
+    protected function getServiceProviderClass($app)
     {
         return \BrianFaust\TaxCalculator\TaxCalculatorServiceProvider::class;
     }
