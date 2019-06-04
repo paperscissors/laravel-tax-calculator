@@ -5,13 +5,13 @@ declare(strict_types=1);
 /*
  * This file is part of Laravel Tax Calculator.
  *
- * (c) Brian Faust <hello@brianfaust.de>
+ * (c) Brian Faust <hello@basecode.sh>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\TaxCalculator;
+namespace Artisanry\TaxCalculator;
 
 class Calculator
 {
@@ -55,7 +55,7 @@ class Calculator
     /**
      * @param int $value
      *
-     * @return \BrianFaust\TaxCalculator\Calculator
+     * @return \Artisanry\TaxCalculator\Calculator
      */
     public function setAmount(int $value): self
     {
@@ -75,7 +75,7 @@ class Calculator
     /**
      * @param float $value
      *
-     * @return \BrianFaust\TaxCalculator\Calculator
+     * @return \Artisanry\TaxCalculator\Calculator
      */
     public function setTaxRate(float $value): self
     {
@@ -95,7 +95,7 @@ class Calculator
     /**
      * @param string $value
      *
-     * @return \BrianFaust\TaxCalculator\Calculator
+     * @return \Artisanry\TaxCalculator\Calculator
      */
     public function setCurrency(string $value): self
     {
@@ -115,7 +115,7 @@ class Calculator
     /**
      * @param string $value
      *
-     * @return \BrianFaust\TaxCalculator\Calculator
+     * @return \Artisanry\TaxCalculator\Calculator
      */
     public function setLocale(string $value): self
     {
@@ -135,7 +135,7 @@ class Calculator
     /**
      * @param float $value
      *
-     * @return \BrianFaust\TaxCalculator\Calculator
+     * @return \Artisanry\TaxCalculator\Calculator
      */
     public function setDiscount(float $value): self
     {
@@ -153,7 +153,7 @@ class Calculator
     }
 
     /**
-     * @return \BrianFaust\TaxCalculator\Money
+     * @return \Artisanry\TaxCalculator\Money
      */
     public function subtotal(): Money
     {
@@ -161,7 +161,7 @@ class Calculator
     }
 
     /**
-     * @return \BrianFaust\TaxCalculator\Money
+     * @return \Artisanry\TaxCalculator\Money
      */
     public function discount(): Money
     {
@@ -179,7 +179,7 @@ class Calculator
     }
 
     /**
-     * @return \BrianFaust\TaxCalculator\Money
+     * @return \Artisanry\TaxCalculator\Money
      */
     public function taxValue(): Money
     {
@@ -189,7 +189,7 @@ class Calculator
     }
 
     /**
-     * @return \BrianFaust\TaxCalculator\Money
+     * @return \Artisanry\TaxCalculator\Money
      */
     public function total(): Money
     {

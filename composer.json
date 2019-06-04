@@ -1,12 +1,12 @@
 {
-    "name": "faustbrian/laravel-tax-calculator",
+    "name": "artisanry/tax-calculator",
     "description": "Simple Tax Calculator for Laravel",
-    "keywords": ["laravel", "framework", "Laravel-Tax-Calculator", "Laravel Tax Calculator", "Brian Faust", "faustbrian"],
+    "keywords": ["laravel", "framework", "Laravel-Tax-Calculator", "Laravel Tax Calculator"],
     "license": "MIT",
     "authors": [{
         "name": "Brian Faust",
-        "email": "hello@brianfaust.me",
-        "homepage": "https://brianfaust.me"
+        "email": "hello@basecode.sh",
+        "homepage": "https://basecode.sh"
     }],
     "require": {
         "php": "^7.1",
@@ -21,12 +21,12 @@
     },
     "autoload": {
         "psr-4": {
-            "BrianFaust\\TaxCalculator\\": "src/"
+            "Artisanry\\TaxCalculator\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BrianFaust\\Tests\\TaxCalculator\\": "tests"
+            "Artisanry\\Tests\\TaxCalculator\\": "tests"
         }
     },
     "config": {
@@ -39,10 +39,10 @@
         },
         "laravel": {
             "providers": [
-                "BrianFaust\\TaxCalculator\\TaxCalculatorServiceProvider"
+                "Artisanry\\TaxCalculator\\TaxCalculatorServiceProvider"
             ],
             "aliases": {
-                "TaxCalculator": "BrianFaust\\TaxCalculator\\Facades\\TaxCalculator"
+                "TaxCalculator": "Artisanry\\TaxCalculator\\Facades\\TaxCalculator"
             }
         }
     },
